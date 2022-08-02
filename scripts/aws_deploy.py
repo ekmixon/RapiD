@@ -27,7 +27,7 @@ def deploy():
     hash = output.stdout.decode("utf-8").strip()
     print("\ngithash: " + hash)
     identifier = f"{hash}-{os.environ['NODE_VERSION']}"
-    distdir = identifier + "-dist"
+    distdir = f"{identifier}-dist"
     print("\ndistdir: " + distdir)
     # Blow away the previous dir, if any.
     if os.path.exists(distdir):
